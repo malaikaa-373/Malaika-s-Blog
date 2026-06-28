@@ -21,7 +21,6 @@ export {
     LogoutBtn ,
     RTE,
     SignUp,
-    Signup,
     Login,
     PostForm, 
     PostCard,
