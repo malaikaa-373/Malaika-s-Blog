@@ -19,6 +19,7 @@ function AllPosts() {
                                 $id={post.$id}
                                 title={post.title}
                                 featuredImage={post.featuredImage}
+                                 slug={post.slug} 
                             />
                         </div>
                     ))}
