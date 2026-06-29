@@ -9,7 +9,7 @@ export default function PostForm({ post }) {
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
         defaultValues: {
             title: post?.title || "",
-            slug: post?.$id || "",
+            slug: post?.slug || "",
             content: post?.content || "",
             status: post?.status || "active",
         },
@@ -33,7 +33,7 @@ export default function PostForm({ post }) {
             });
 
             if (dbPost) {
-                navigate(`/post/${dbPost.$id}`);
+                navigate(`/post/${dbPost.slug}`);
             }
         } else {
             const file = await appwriteService.uploadFile(data.image[0]);
